@@ -94,6 +94,6 @@ export default{
 		return voterList;
 	},
 	getWinnerList: function(date){
-		return winnerList.filter(winner => winner.date >= date.startDate && winner.date <= date.endDate);
+		return winnerList.filter(winner => Date.parse(winner.date).valueOf() >= Date.parse(date.startDate).valueOf() && Date.parse(winner.date).valueOf() <= Date.parse(date.endDate).valueOf());
 	}
 }

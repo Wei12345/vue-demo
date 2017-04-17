@@ -11,6 +11,7 @@ Vue.use(Vuex);
 const state = {
 	page: 'voterPage'
 }
+// 使用嚴格模式
 const debug = true;
 
 export default new Vuex.Store({

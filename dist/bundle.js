@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a5628abc3ec89a7c4673"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f9031d1c70eeb75ce44e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -10761,7 +10761,7 @@ const winnerList = [
 		return voterList;
 	},
 	getWinnerList: function(date){
-		return winnerList.filter(winner => winner.date >= date.startDate && winner.date <= date.endDate);
+		return winnerList.filter(winner => Date.parse(winner.date).valueOf() >= Date.parse(date.startDate).valueOf() && Date.parse(winner.date).valueOf() <= Date.parse(date.endDate).valueOf());
 	}
 });
 
@@ -14002,7 +14002,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		startDateChange(date){
 			const endDate = this.$store.getters.endDate;
 			// 如果開始日期的變更日期大於結束日期，則開始日期變為結束日期，結束日期變為變更日期
-			if(date > endDate){	
+			if(Date.parse(date).valueOf() > Date.parse(endDate).valueOf()){
 				this.$store.dispatch('changeStartDate', endDate);
 				this.$store.dispatch('changeEndDate', date);
 			}
@@ -14016,7 +14016,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		endDateChange(date){
 			// 如果結束日期的變更小於開始日期，則結束日期變為開始日期，開始日期變為變更日期
 			const startDate = this.$store.getters.startDate;
-			if(date < startDate){
+			if(Date.parse(date).valueOf() < Date.parse(startDate).valueOf()){
 				this.$store.dispatch('changeEndDate', startDate);
 				this.$store.dispatch('changeStartDate', date);
 			}
@@ -15884,6 +15884,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
 const state = {
 	page: 'voterPage'
 }
+// 使用嚴格模式
 const debug = true;
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({

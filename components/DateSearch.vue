@@ -25,7 +25,7 @@
 			startDateChange(date){
 				const endDate = this.$store.getters.endDate;
 				// 如果開始日期的變更日期大於結束日期，則開始日期變為結束日期，結束日期變為變更日期
-				if(date > endDate){	
+				if(Date.parse(date).valueOf() > Date.parse(endDate).valueOf()){
 					this.$store.dispatch('changeStartDate', endDate);
 					this.$store.dispatch('changeEndDate', date);
 				}
@@ -39,7 +39,7 @@
 			endDateChange(date){
 				// 如果結束日期的變更小於開始日期，則結束日期變為開始日期，開始日期變為變更日期
 				const startDate = this.$store.getters.startDate;
-				if(date < startDate){
+				if(Date.parse(date).valueOf() < Date.parse(startDate).valueOf()){
 					this.$store.dispatch('changeEndDate', startDate);
 					this.$store.dispatch('changeStartDate', date);
 				}
