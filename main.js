@@ -11,3 +11,4 @@ new Vue({
 	}
 });
 store.dispatch('getVoterList');
+store.dispatch('getWinnerList');

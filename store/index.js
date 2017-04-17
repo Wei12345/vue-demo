@@ -4,12 +4,14 @@ import getters from './getters.js';
 import actions from './actions.js';
 import mutations from './mutations.js';
 import voter from './modules/voter.js';
+import winner from './modules/winner.js';
 
 Vue.use(Vuex);
 
 const state = {
 	page: 'voterPage'
 }
+const debug = true;
 
 export default new Vuex.Store({
 	state,
@@ -17,6 +19,8 @@ export default new Vuex.Store({
 	actions,
 	mutations,
 	modules: {
-		voter
-	}
+		voter,
+		winner
+	},
+	strict: debug
 });

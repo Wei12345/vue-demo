@@ -1,8 +1,8 @@
 <template>
 	<nav>
 		<ul>
-			<li @click="changePage" :class="{active: page == 'voterPage'}">投票列表</li>
-			<li @click="changePage" :class="{active: page == 'winnerPage'}">得獎名單</li>
+			<li @click="changePage('voterPage')" :class="{active: page == 'voterPage'}">投票列表</li>
+			<li @click="changePage('winnerPage')" :class="{active: page == 'winnerPage'}">得獎名單</li>
 		</ul>
 	</nav>
 </template>
@@ -15,8 +15,8 @@
 			}
 		},
 		methods: {
-			changePage: function(){
-				this.$store.dispatch('changePage');
+			changePage: function(page){
+				this.$store.dispatch('changePage', page);
 			}
 		}
 	}

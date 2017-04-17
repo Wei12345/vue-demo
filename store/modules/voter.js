@@ -9,7 +9,6 @@ const state = {
 		phone: true,
 		email: true
 	}
-	
 }
 
 const getters = {
@@ -18,19 +17,19 @@ const getters = {
 }
 
 const actions = {
-	getVoterList: function(content){
+	getVoterList(content){
 		content.commit('RECEIVE_VOTER', api.getVoterList());
 	},
-	setVoterOption: function(content, voterOption){
-		content.commit('RECEIVE_OPTION', voterOption);
+	setVoterOption(content, voterOption){
+		content.commit('RECEIVE_VOTER_OPTION', voterOption);
 	}
 }
 
 const mutations = {
-	RECEIVE_VOTER: function(state, voterList){
+	RECEIVE_VOTER(state, voterList){
 		state.voterList = voterList;
 	},
-	RECEIVE_OPTION: function(state, voterOption){
+	RECEIVE_VOTER_OPTION(state, voterOption){
 		state.voterOption = voterOption;
 	}
 }

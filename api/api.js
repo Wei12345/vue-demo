@@ -64,7 +64,7 @@ const winnerList = [
 		name: '李二',
 		phone: '0922222222',
 		email: '222@bbb.om',
-		awards: 'aaa獎'
+		award: 'aaa獎'
 	},
 	{
 		id: 2,
@@ -75,7 +75,7 @@ const winnerList = [
 		name: '張四',
 		phone: '0944444444',
 		email: '444@ddd.com',
-		awards: 'bbb獎'
+		award: 'bbb獎'
 	},
 	{
 		id: 3,
@@ -86,7 +86,7 @@ const winnerList = [
 		name: '林六',
 		phone: '0966666666',
 		email: '666@fff.com',
-		awards: 'ccc獎'
+		award: 'ccc獎'
 	}
 ];
 export default{
