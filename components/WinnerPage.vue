@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="page">
 		<date-search></date-search>
 		<option-bar></option-bar>
 	</section>
@@ -16,8 +16,7 @@
 		}
 	}
 </script>
+
 <style lang="sass" scoped>
-	section{
-		display: none;
-	}
+
 </style>

@@ -1,17 +1,27 @@
 <template>
 	<nav>
 		<ul>
-			<li class="active">投票列表</li>
-			<li>得獎名單</li>
+			<li @click="changePage" :class="{active: page == 'voterPage'}">投票列表</li>
+			<li @click="changePage" :class="{active: page == 'winnerPage'}">得獎名單</li>
 		</ul>
 	</nav>
 </template>
 
 <script>
 	export default{
-
+		computed: {
+			page: function(){
+				return this.$store.getters.page;
+			}
+		},
+		methods: {
+			changePage: function(){
+				this.$store.dispatch('changePage');
+			}
+		}
 	}
 </script>
+
 <style lang="sass" scoped>
 	$height: 3.2rem;
 	nav{

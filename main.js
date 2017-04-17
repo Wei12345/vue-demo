@@ -1,4 +1,4 @@
-import 'normalize.css'
+import 'normalize.css';
 import Vue from 'vue';
 import store from './store/index.js';
 import App from './components/App.vue';
@@ -10,3 +10,4 @@ new Vue({
 		App: App 
 	}
 });
+store.dispatch('getVoterList');

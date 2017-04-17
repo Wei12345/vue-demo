@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="page">
 		<option-bar></option-bar>
 	</section>
 </template>
@@ -13,8 +13,6 @@
 		}
 	}
 </script>
+
 <style lang="sass" scoped>
-	section{
-		display: none;
-	}
 </style>

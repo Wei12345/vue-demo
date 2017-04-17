@@ -6,6 +6,7 @@
 		<navbar class="navbar"></navbar>
 	</header>
 </template>
+
 <script>
 	import Navbar from './Navbar.vue';
 
@@ -15,6 +16,7 @@
 		}
 	}
 </script>
+
 <style lang="sass" scoped>
 	$height: 3.2rem;
 	header{
@@ -24,6 +26,7 @@
 		padding: 0px 4rem;
 		font-size: 1.1rem;
 		color: #777;
+		margin-bottom: 1.2rem;
 		.logo{
 			display: inline-block;
 			line-height: $height;
