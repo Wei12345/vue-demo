@@ -3,7 +3,7 @@
 
 ### 安裝dependencies
     npm install
-### 一次性編譯
+### 編譯
     npm run build
 ### server以及hot reload localhost:8080
     npm run dev
