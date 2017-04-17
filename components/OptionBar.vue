@@ -1,3 +1,4 @@
+<!-- 選項列 -->
 <template>
 	<section>
 		<label>
@@ -25,7 +26,8 @@
 	
 	export default{
 		computed: {
-			option: function(){
+			option(){
+				// 依照頁面得到不同的選項狀態
 				if(this.$store.getters.page == 'voterPage'){
 					return this.$store.getters.voterOption;
 				}
@@ -35,13 +37,16 @@
 			}
 		},
 		methods: {
-			changeOption: function(e){
+			changeOption(e){
+				// 依照頁面提交變更的選項狀態
 				if(this.$store.getters.page == 'voterPage'){
+					// 防止物件傳址造成voterOption變更，使用assign傳值
 					const option = Object.assign({}, this.$store.getters.voterOption);
 					option[e.target.value] = e.target.checked;
 					this.$store.dispatch('setVoterOption', option);
 				}
 				else if(this.$store.getters.page == 'winnerPage'){
+					// 防止物件傳址造成winnerOption變更，使用assign傳值
 					const option = Object.assign({}, this.$store.getters.winnerOption);
 					option[e.target.value] = e.target.checked;
 					this.$store.dispatch('setWinnerOption', option);

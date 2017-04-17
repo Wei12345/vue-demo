@@ -1,3 +1,4 @@
+<!-- 得獎頁 -->
 <template>
 	<section class="page">
 		<date-search></date-search>
@@ -5,7 +6,7 @@
 		<table>
 			<thead>
 				<tr>
-					<td v-show="winnerOption['date']">日期</td>
+					<td v-show="winnerOption['date']">抽獎日期</td>
 					<td v-show="winnerOption['optionNumber']">投票選項</td>
 					<td v-show="winnerOption['optionContent']">投票內容</td>
 					<td v-show="winnerOption['name']">名字</td>
@@ -35,10 +36,12 @@
 
 	export default{
 		computed: {
-			winnerrList: function(){
+			winnerrList(){
+				// 得到得獎列表
 				return this.$store.getters.winnerList;
 			},
-			winnerOption: function(){
+			winnerOption(){
+				// 得到得獎選項狀態
 				return this.$store.getters.winnerOption;
 			}
 		},

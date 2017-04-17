@@ -1,3 +1,4 @@
+<!-- 通用header -->
 <template>
 	<header>
 		<div class="logo">
@@ -35,7 +36,7 @@
 			display: inline-block;
 			float: right;
 			height: $height;
-			width: 18%;
+			width: 13rem;
 		}
 	}
 </style>

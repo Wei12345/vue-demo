@@ -1,3 +1,4 @@
+<!-- 主畫面 -->
 <template>
 	<section>
 		<page-header></page-header>
@@ -18,7 +19,8 @@
 			WinnerPage: WinnerPage
 		},
 		computed: {
-			page: function(){
+			page(){
+				// 得到頁面顯示狀態
 				return this.$store.getters.page;
 			}
 		}

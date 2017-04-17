@@ -1,3 +1,4 @@
+<!-- 導覽列 -->
 <template>
 	<nav>
 		<ul>
@@ -10,12 +11,14 @@
 <script>
 	export default{
 		computed: {
-			page: function(){
+			page(){
+				// 得到頁面狀態
 				return this.$store.getters.page;
 			}
 		},
 		methods: {
-			changePage: function(page){
+			changePage(page){
+				// 變更頁面狀態
 				this.$store.dispatch('changePage', page);
 			}
 		}

@@ -1,3 +1,4 @@
+<!-- 投票頁 -->
 <template>
 	<section class="page">
 		<option-bar></option-bar>
@@ -31,10 +32,12 @@
 
 	export default{
 		computed: {
-			voterList: function(){
+			voterList(){
+				// 得到投票列表
 				return this.$store.getters.voterList;
 			},
-			voterOption: function(){
+			voterOption(){
+				// 得到投票選項狀態
 				return this.$store.getters.voterOption;
 			}
 		},
