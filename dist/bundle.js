@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "041ab2cddd730475d7cc"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a5628abc3ec89a7c4673"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -16023,12 +16023,10 @@ const mutations = {
 	},
 	// 執行得獎開始日期更改
 	RECEIVE_START_DATE(state, date){
-		console.log(date);
 		state.startDate = date;
 	},
 	// 執行得獎結束日期更改
 	RECEIVE_END_DATE(state, date){
-		console.log(date);
 		state.endDate = date;
 	}
 }
