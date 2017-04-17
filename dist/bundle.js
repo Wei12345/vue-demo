@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f9031d1c70eeb75ce44e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d703ad712fc5909e39e4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -14563,16 +14563,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       rawName: "v-show",
       value: (_vm.page == 'voterPage'),
       expression: "page == 'voterPage'"
-    }],
-    staticClass: "page"
+    }]
   }), _vm._v(" "), _c('winner-page', {
     directives: [{
       name: "show",
       rawName: "v-show",
       value: (_vm.page == 'winnerPage'),
       expression: "page == 'winnerPage'"
-    }],
-    staticClass: "page"
+    }]
   })], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true

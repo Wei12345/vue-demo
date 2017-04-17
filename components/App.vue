@@ -2,8 +2,8 @@
 <template>
 	<section>
 		<page-header></page-header>
-		<voter-page class="page" v-show="page == 'voterPage'"></voter-page>
-		<winner-page class="page" v-show="page == 'winnerPage'"></winner-page>
+		<voter-page v-show="page == 'voterPage'"></voter-page>
+		<winner-page v-show="page == 'winnerPage'"></winner-page>
 	</section>
 </template>
 	
